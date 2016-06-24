@@ -1,0 +1,10 @@
+extends layout
+block content
+    h1 Редактировать комнату чата:
+        form(method="post")
+            fieldset.form-group
+                label(for="name") Имя:
+                input.form-control(name="name", type="text", placeholder="Введите имя чата", value="#{room.name}")
+                small.text-muted Впишите название чата
+            button.btn.btn-primary(type="submit") Сохранить новый чат
+            button.btn.btn-default(href="/admin/rooms") Отменить
