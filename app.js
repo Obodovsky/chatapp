@@ -5,13 +5,14 @@ var BodyParser = require("body-parser");
 
 app.use(express.static("public"));
 app.use(express.static("node_modules/bootstrap/dist"));
+app.use(express.static("node_modules/jquery/dist"));
 app.use(BodyParser.urlencoded({extended: true}));
 
 app.set('view engine', 'jade');
 app.set('views', './views');
 
 app.get('/', function (req, res) {
-    res.render('index', {
+    res.render('home', {
         pagetitle: "Главная"
 
 
