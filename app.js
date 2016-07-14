@@ -23,6 +23,9 @@ app.get('/', function (req, res) {
 var adminRouter = require('./admin');
 app.use("/admin",adminRouter);
 
+var apiRouter=require("./api");
+app.use("/api", apiRouter);
+
 app.listen(3010, function(){
     console.log("Чат работает на 3010 порту")
 
