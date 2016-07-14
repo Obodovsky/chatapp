@@ -7,6 +7,7 @@ app.use(express.static("public"));
 app.use(express.static("node_modules/bootstrap/dist"));
 app.use(express.static("node_modules/jquery/dist"));
 app.use(BodyParser.urlencoded({extended: true}));
+app.use(BodyParser.json());
 
 app.set('view engine', 'jade');
 app.set('views', './views');
