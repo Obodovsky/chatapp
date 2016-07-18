@@ -18,6 +18,9 @@ html(lang='en')
                             a(href='/admin/rooms') Комнаты чата
                         li
                             a(href='/admin/users') Пользователи
+                     ul.nav.navbar-nav.navbar-right
+                         li
+                            a(href="/logout") Выход #{user.name}
         .container
             .main-content
                 block content
